@@ -9,6 +9,7 @@ rm -rf dist && mkdir dist && mkdir dist/js
 # add -d switch for sourcemapping and debugging production.
 NODE_ENV=production browserify -e client.js -o dist/js/main.js \
   -t envify \
+  -t sheetify/transform \
   -g yo-yoify \
   -g unassertify \
   -g es2040 \

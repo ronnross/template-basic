@@ -1,5 +1,8 @@
+const sf = require('sheetify')
 const choo = require('choo')
 const app = choo()
+
+sf('./assets/main.css', { global: true })
 
 app.model(require('./models/app'))
 
